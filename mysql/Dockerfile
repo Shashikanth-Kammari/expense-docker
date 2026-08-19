@@ -1,4 +1,5 @@
 FROM mysql:8.0 
+RUN adduser -r expense
 ENV MYSQL_ROOT_PASSWORD=ExpenseApp@1 \
     MSQL_USER=expense \
     MYSQL_PASSWORD=ExpenseApp@1 \
