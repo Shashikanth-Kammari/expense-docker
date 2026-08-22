@@ -56,7 +56,7 @@
 
 By following these best practices, you can ensure that your Docker containers are secure, efficient, and maintainable.
 
-## docker  
+## 16. docker  
 - **Docker uses bridge network:** basically docker uses docker0 network for communication for to containers we need to create the network between containers 
 docker network create <give name for network> while we create the container we need to give netowrk name as well
 **docker run -d -p 3306:3306 --name mysql --network expense <image name>**
