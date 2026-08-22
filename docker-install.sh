@@ -21,10 +21,12 @@ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 
 echo "installed docker successfuly"
 
-echo "enable the docker..."
-sudo systemctl enable docker
-
 echo "starting the docker..."
 sudo systemctl start docker
 
 echo "docker started successfuly"
+
+echo "enable the docker..."
+sudo systemctl enable docker
+
+usermode -aG docker ec2-user
