@@ -64,3 +64,4 @@ docker network create <give name for network> while we create the container we n
 ## 16. docker compose
 
 **docker compose up -d**  it will applicable for all the services mentioned in the services in docker compose yaml 
+by using docker compose we can up and down network and vloumes.g
