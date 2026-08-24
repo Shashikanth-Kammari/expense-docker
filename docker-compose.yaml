@@ -23,6 +23,8 @@ services:
   forntend:
     image: frontend:v1.0.0
     container_name: frontend # --name frontend
+    valumes:
+      - data-volume:/var/lib/frontend
     depends_on: 
     - backend
     ports: 
