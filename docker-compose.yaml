@@ -20,7 +20,7 @@ services:
       - data-volume:/var/lib/backend-data
     depends_on: 
     - mysql
-    command: sh -c "sleep 20 && node /opt/server/index.js"
+    command: sh -c "sleep 20 && node /opt/server/index.js" #this will wait for mysql creation because while creating mysql backend already been created so backend can't wait for mysql so we need to wait for mysql creations then backend will creates
   #frontend container volume 
   forntend:
     image: frontend:v1.0.0
