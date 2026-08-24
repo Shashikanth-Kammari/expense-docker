@@ -10,7 +10,7 @@ services:
   mysql:
     image: mysql:v1.0.0
     contianer_name: mysql # --name mysql
-    valumes:
+    volumes:
       - data-volume:/var/lib/mysql-data
   #backend container and volume
   backend:
@@ -25,7 +25,7 @@ services:
   forntend:
     image: frontend:v1.0.0
     container_name: frontend # --name frontend
-    valumes:
+    volumes:
       - data-volume:/var/lib/frontend-data
     depends_on: 
     - backend
