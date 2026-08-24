@@ -11,13 +11,13 @@ services:
     image: mysql:v1.0.0
     contianer_name: mysql # --name mysql
     valumes:
-      - data-volume:/var/lib/mysql
+      - data-volume:/var/lib/mysql-data
   #backend container and volume
   backend:
     image: backend:v1.0.0
     container_name: backend # --name backend
     valumes:
-      - data-volume:/var/lib/backend
+      - data-volume:/var/lib/backend-data
     depends_on: 
     - mysql
     command: sh -c "sleep 20 && node /opt/server/index.js"
@@ -26,7 +26,7 @@ services:
     image: frontend:v1.0.0
     container_name: frontend # --name frontend
     valumes:
-      - data-volume:/var/lib/frontend
+      - data-volume:/var/lib/frontend-data
     depends_on: 
     - backend
     ports: 
