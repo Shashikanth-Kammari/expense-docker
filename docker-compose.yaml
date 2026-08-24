@@ -4,20 +4,29 @@ networks:
   default:
     name: expense
 volumes:
-  mysql:   # docker volume create mysql
+  mysql:
+    external: true  
+  backend:
+    external: true
+  frontend: 
+    external: true
 services:
   #db container and volume for store the data related to db for backup
   mysql:
     image: mysql:v1.0.0
     container_name: mysql # --name mysql
     volumes:
-      - mysql:/var/lib/mysql # -v volume-name: /path/in/container
+      - source: mysql # -v volume-name: /path/in/container
+        target: /var/lib/mysql
+        type: volume
   #backend container and volume
   backend:
     image: backend:v1.0.0
     container_name: backend # --name backend
     volumes:
-      - data-volume:/backend
+      - source: backend
+        target: /backend
+        type: volume
     command: sh -c "sleep 20 && node /opt/server/index.js" #this will wait for mysql creation because while creating mysql backend already been created so backend can't wait for mysql so we need to wait for mysql creations then backend will creates
     depends_on: 
     - mysql
@@ -26,7 +35,9 @@ services:
     image: frontend:v1.0.0
     container_name: frontend # --name frontend
     volumes:
-      - data-volume:/frontend
+      - source: frontend
+        target: /frontend
+        type: volume
     depends_on: 
     - backend
     ports: 
