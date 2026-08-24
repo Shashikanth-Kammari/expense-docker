@@ -4,14 +4,15 @@ networks:
   default:
     name: expense
 volumes:
-  -data-volume:
+  data-volume:
+    external: true
 services:
   #db container and volume for store the data related to db for backup
   mysql:
     image: mysql:v1.0.0
     contianer_name: mysql # --name mysql
     volumes:
-      - data-volume:/var/lib/mysql-data
+      - data-volume:/db
   #backend container and volume
   backend:
     image: backend:v1.0.0
