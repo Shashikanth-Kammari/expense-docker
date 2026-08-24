@@ -3,7 +3,7 @@ name: expense
 networks:
   default:
     name: expense
-valumes:
+volumes:
   -data-volume:
 services: 
   mysql:
