@@ -3,8 +3,8 @@ name: expense
 networks:
   default:
     name: expense
-vlumes:
-  
+valumes:
+
 services: 
   mysql:
     image: mysql:v1.0.0
