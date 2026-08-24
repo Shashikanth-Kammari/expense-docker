@@ -1,4 +1,4 @@
-FROM node:20.15.0-alpine3.20
+FROM node:20.15.0
 ENV DB_HOST=mysql
 RUN addgroup -S expense && adduser -S expense -G expense \
     && mkdir /opt/server \
