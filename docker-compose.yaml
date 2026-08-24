@@ -12,7 +12,7 @@ services:
     image: mysql:v1.0.0
     contianer_name: mysql # --name mysql
     volumes:
-      - data-volume:/db
+      - data-volume:/mysql
   #backend container and volume
   backend:
     image: backend:v1.0.0
