@@ -5,12 +5,14 @@ networks:
     name: expense
 volumes:
   -data-volume:
-services: 
+services:
+  #db container and volume for store the data related to db for backup
   mysql:
     image: mysql:v1.0.0
     contianer_name: mysql # --name mysql
     valumes:
       - data-volume:/var/lib/mysql
+  #backend container and volume
   backend:
     image: backend:v1.0.0
     container_name: backend # --name backend
@@ -19,7 +21,7 @@ services:
     depends_on: 
     - mysql
     command: sh -c "sleep 20 && node /opt/server/index.js"
-  
+  #frontend container volume 
   forntend:
     image: frontend:v1.0.0
     container_name: frontend # --name frontend
