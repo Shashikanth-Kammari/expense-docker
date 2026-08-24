@@ -10,24 +10,24 @@ services:
   #db container and volume for store the data related to db for backup
   mysql:
     image: mysql:v1.0.0
-    contianer_name: mysql # --name mysql
+    container_name: mysql # --name mysql
     volumes:
       - data-volume:/mysql
   #backend container and volume
   backend:
     image: backend:v1.0.0
     container_name: backend # --name backend
-    valumes:
-      - - data-volume:/backend
+    volumes:
+      - data-volume:/backend
     command: sh -c "sleep 20 && node /opt/server/index.js" #this will wait for mysql creation because while creating mysql backend already been created so backend can't wait for mysql so we need to wait for mysql creations then backend will creates
     depends_on: 
     - mysql
   #frontend container volume 
-  forntend:
+  frontend:
     image: frontend:v1.0.0
     container_name: frontend # --name frontend
     volumes:
-      - - data-volume:/frontend
+      - data-volume:/frontend
     depends_on: 
     - backend
     ports: 
