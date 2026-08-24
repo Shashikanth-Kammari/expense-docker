@@ -4,7 +4,7 @@ networks:
   default:
     name: expense
 valumes:
-
+  - data-volume:/var/lib/db
 services: 
   mysql:
     image: mysql:v1.0.0
