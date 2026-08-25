@@ -6,10 +6,6 @@ networks:
 volumes:
   mysql:
     external: true  
-  backend:
-    external: true
-  frontend: 
-    external: true
 services:
   #db container and volume for store the data related to db for backup
   mysql:
