@@ -8,5 +8,5 @@ COPY package.json .
 COPY *.js /opt/server/
 RUN npm install
 USER expense
-EXPOSE 80
+EXPOSE 8080
 CMD [ "node","index.js" ]
