@@ -19,6 +19,7 @@ services:
       - MYSQL_ROOT_PASSWORD=ExpenseApp@1
       - MSQL_USER=expense
       - MYSQL_PASSWORD=ExpenseApp@1
+      - MYSQL_DATABASE=transactions
   #backend container and volume
   backend:
     image: backend:v1.0
