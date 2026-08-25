@@ -15,6 +15,9 @@ services:
       - source: mysql # -v volume-name: /path/in/container
         target: /var/lib/mysql
         type: volume
+    environment:
+      - MYSQL_ROOT_PASSWORD=ExpenseApp@1
+      - MSQL_USER=expense
   #backend container and volume
   backend:
     image: backend:v1.0
