@@ -9,7 +9,7 @@ volumes:
 services:
   #db container and volume for store the data related to db for backup
   mysql:
-    image: mysql:v1.0
+    image: shashikanthchary/mysql:v1.0
     container_name: mysql # --name mysql
     volumes:
       - source: mysql # -v volume-name: /path/in/container
