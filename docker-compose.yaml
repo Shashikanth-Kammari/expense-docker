@@ -29,7 +29,7 @@ services:
     - mysql
   #frontend container volume 
   frontend:
-    image: shashikanthchary/frontend:v1.0
+    image: frontend:v1.0
     container_name: frontend # --name frontend
     depends_on: 
     - backend
