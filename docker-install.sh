@@ -10,8 +10,6 @@ sudo dnf remove docker \
                   podman \
                   runc
 
-echo "removed the previous docker files"
-
 sudo dnf -y install dnf-plugins-core
 
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
