@@ -16,4 +16,3 @@ RUN touch /var/run/nginx.pid && \
 COPY expense.conf /etc/nginx/nginx.conf
 COPY code /usr/share/nginx/html/
 USER nginx
-EXPOSE 8080
