@@ -66,8 +66,8 @@ docker network create <give name for network> while we create the container we n
 **docker compose up -d**  it will applicable for all the services mentioned in the services in docker compose yaml 
 by using docker compose we can up and down network and vloumes.g
 
-docker compose up -d --> it will up the services and volume and networks at a time
-docker compose down --> it will down the services at a time
+**docker compose up -d** --> it will up the services and volume and networks at a time
+**docker compose down** --> it will down the services at a time
 
 ## 17. docker volumes
 **docker volume** docker actually ephemeral in nature it means when container deleted docker delete the data as well. To store the data related container we need to explicitly configure the docker volumes(storage), so that docker will store the data for backup if the docker container deletes.
