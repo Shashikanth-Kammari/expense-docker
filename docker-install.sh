@@ -26,5 +26,3 @@ echo "docker started successfuly"
 sudo systemctl enable docker
 
 usermode -aG docker ec2-user
-
-sudo systemctl status docker
