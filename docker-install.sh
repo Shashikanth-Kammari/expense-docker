@@ -24,7 +24,6 @@ sudo systemctl start docker
 
 echo "docker started successfuly"
 
-echo "enable the docker..."
 sudo systemctl enable docker
 
 usermode -aG docker ec2-user
