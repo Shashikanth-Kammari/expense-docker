@@ -14,14 +14,9 @@ sudo dnf -y install dnf-plugins-core
 
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 
-echo "installing docker..."
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-echo "installed docker successfuly"
-
 sudo systemctl start docker
-
-echo "docker started successfuly"
 
 sudo systemctl enable docker
 
