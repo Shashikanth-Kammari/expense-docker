@@ -2,6 +2,8 @@
 
 sudo dnf install git -y
 
+git --version
+
 sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
