@@ -1,8 +1,16 @@
 #!/bin/bash
 
+echo "Installing git..."
+
 sudo dnf install git -y
 
+echo "Git installed successfully"
+
+echo "Git version:"
+
 git --version
+
+echo "Removing old Docker packages..."
 
 sudo dnf remove docker \
                   docker-client \
