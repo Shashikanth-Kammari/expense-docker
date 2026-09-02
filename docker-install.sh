@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum install git -y
+sudo dnf update -y
 
 sudo dnf remove docker \
                   docker-client \
