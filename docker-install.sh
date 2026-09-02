@@ -22,3 +22,4 @@ sudo systemctl enable docker
 
 echo "Docker installed successfully"
 usermode -aG docker ec2-user
+echo "Added ec2-user to docker group"
