@@ -22,7 +22,7 @@ services:
       - MYSQL_DATABASE=transactions
   #backend container and volume
   backend:
-    image: backend:v1.0
+    image: backend:v1.0.0
     container_name: backend # --name backend
     command: sh -c "sleep 20 && node /opt/server/index.js" #this will wait for mysql creation because while creating mysql backend already been created so backend can't wait for mysql so we need to wait for mysql creations then backend will creates
     depends_on: 
